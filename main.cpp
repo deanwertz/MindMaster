@@ -1,8 +1,14 @@
 #include <iostream>
-
+#include <vector>
+#include "Guess.h"
+using namespace std;
 int main() {
-    std::cout << "Hello, World Ishan!" << std::endl;
-    std::cout << "Peter was here." << std::endl;
-    std::cout << "Ishan was here - Feb 6, 2018." << std::endl;
+    Game game;
+   // std::cout << "Hello, World!" << std::endl;
+    vector<int> banana;
+    string number = "1234";
+   // for (int i = 0; i< number)
+    game.guessPrompt();
+
     return 0;
 }
