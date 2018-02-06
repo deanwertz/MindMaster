@@ -67,6 +67,5 @@ void Game:: guessPrompt(){
     if (guesses >= 10){
         cout << "You used too many guesses, You loose" << endl;
     }
-    cout << "Would you like to play again (Y/N)? ";
-    cin >>
+
 }

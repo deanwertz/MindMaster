@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/cs205.dir/main.cpp.o"
+  "CMakeFiles/cs205.dir/Guess.cpp.o"
   "cs205.pdb"
   "cs205"
 )
