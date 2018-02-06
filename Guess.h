@@ -14,6 +14,7 @@ public:
     Game();
     vector<string> myVector();
     void guessPrompt();
+    void instructions();
     void slotsDisplay();
 
     vector<string> guessVector;
