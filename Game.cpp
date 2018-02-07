@@ -54,7 +54,7 @@ void Game:: guessPrompt(){
             cout << guesses << endl;
     }
             if (guess=='h'||guess='H'){
-                hints();
+                hintss();
             }
         else{
             cout << "Game had the incorrect number of pegs" << endl;

@@ -1,3 +1,3 @@
-/Users/ishanverma/Desktop/cs205/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/ishanverma/Desktop/cs205/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/ishanverma/Desktop/cs205/cmake-build-debug/CMakeFiles/cs205.dir
+/Users/ishanverma/Desktop/205_project/MindMaster/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/ishanverma/Desktop/205_project/MindMaster/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/ishanverma/Desktop/205_project/MindMaster/cmake-build-debug/CMakeFiles/cs205.dir

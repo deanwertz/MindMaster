@@ -20,7 +20,7 @@ vector<string> Game:: myVector(){
     }
     return answer;
 }
-void Game::hints() {
+void Game::hintss() {
     for (int i =0;i<4;i++){
         for (int j =0;j<4;j++){
             if((guessingVector[i]==answer[j])&&(guessingVector[i]!=answer[i])){
