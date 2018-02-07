@@ -12,11 +12,13 @@ class Game {
 public:
 
     Game();
-    vector<string> myVector();
-    void guessPrompt();
-    void instructions();
-    void slotsDisplay();
 
+    void guessPrompt();
+    void slotsDisplay();
+    void choosePrompt();
+
+
+    vector<string> myVector();
     vector<string> guessVector;
     string guess;
     bool guessOrChoose;
@@ -26,11 +28,18 @@ public:
     int hints;
     string hint;
     string playAgain;
+    vector<string> chooseVector;
 
 };
 
 
+class Choose{
 
+
+    vector<string> chooseVector;
+
+
+};
 
 
 #endif //CS205MASTERMIND_GUESS_H

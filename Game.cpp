@@ -1,7 +1,7 @@
 //
 // Created by Dean Wertz on 2/4/18.
 //
-#include "Guess.h"
+#include "Game.h"
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -30,13 +30,6 @@ void Game:: slotsDisplay(){
         cout << slots[i] << endl;
     }
 }
-void Game::instructions() {
-
-    cout<<"----------Welcome to Master Mind Game----------"<<endl;
-    cout<<"----Enter these digits for different colors----"<<endl;
-    cout<<"0-Red 1-Blue 2-Green 3-Yellow 4-Orange 5-Violet"<<endl;
-
-}
 
 void Game:: guessPrompt(){
    vector<string> guessingVector(4);
@@ -61,7 +54,7 @@ void Game:: guessPrompt(){
             cout << guesses << endl;
     }
         else{
-            cout << "Guess had the incorrect number of pegs" << endl;
+            cout << "Game had the incorrect number of pegs" << endl;
         }
     }
 
@@ -74,6 +67,6 @@ void Game:: guessPrompt(){
     if (guesses >= 10){
         cout << "You used too many guesses, You loose" << endl;
     }
-
+    cout << "Would you like to play again (Y/N)? ";
 
 }

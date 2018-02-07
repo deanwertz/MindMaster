@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/ishanverma/Desktop/MindMaster
+CMAKE_SOURCE_DIR = /Users/ishanverma/Desktop/cs205
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/ishanverma/Desktop/MindMaster/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/ishanverma/Desktop/cs205/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ishanverma/Desktop/MindMaster/cmake-build-debug/CMakeFiles /Users/ishanverma/Desktop/MindMaster/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ishanverma/Desktop/cs205/cmake-build-debug/CMakeFiles /Users/ishanverma/Desktop/cs205/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ishanverma/Desktop/MindMaster/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ishanverma/Desktop/cs205/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,33 +123,6 @@ cs205/fast:
 	$(MAKE) -f CMakeFiles/cs205.dir/build.make CMakeFiles/cs205.dir/build
 .PHONY : cs205/fast
 
-Guess.o: Guess.cpp.o
-
-.PHONY : Guess.o
-
-# target to build an object file
-Guess.cpp.o:
-	$(MAKE) -f CMakeFiles/cs205.dir/build.make CMakeFiles/cs205.dir/Guess.cpp.o
-.PHONY : Guess.cpp.o
-
-Guess.i: Guess.cpp.i
-
-.PHONY : Guess.i
-
-# target to preprocess a source file
-Guess.cpp.i:
-	$(MAKE) -f CMakeFiles/cs205.dir/build.make CMakeFiles/cs205.dir/Guess.cpp.i
-.PHONY : Guess.cpp.i
-
-Guess.s: Guess.cpp.s
-
-.PHONY : Guess.s
-
-# target to generate assembly for a file
-Guess.cpp.s:
-	$(MAKE) -f CMakeFiles/cs205.dir/build.make CMakeFiles/cs205.dir/Guess.cpp.s
-.PHONY : Guess.cpp.s
-
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -186,9 +159,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... cs205"
-	@echo "... Guess.o"
-	@echo "... Guess.i"
-	@echo "... Guess.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -6,31 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/ishanverma/Desktop/MindMaster/Guess.cpp
-Guess.h
-/Users/ishanverma/Desktop/MindMaster/Guess.h
+/Users/ishanverma/Desktop/cs205/main.cpp
 iostream
 -
-cstdlib
--
-ctime
--
-vector
--
-
-/Users/ishanverma/Desktop/MindMaster/Guess.h
-vector
--
-string
--
-iostream
--
-
-/Users/ishanverma/Desktop/MindMaster/main.cpp
-iostream
--
-vector
--
-Guess.h
-/Users/ishanverma/Desktop/MindMaster/Guess.h
 
