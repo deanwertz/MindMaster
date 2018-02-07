@@ -21,7 +21,7 @@ public:
     void guessPrompt();
     void instructions();
     void slotsDisplay();
-
+    void hints();
     vector<string> answer;
     vector<string> guessVector;
     vector<string> slots;

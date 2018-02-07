@@ -53,6 +53,9 @@ void Game:: guessPrompt(){
             cout << " Number of guesses used: " ;
             cout << guesses << endl;
     }
+            if (guess=='h'||guess='H'){
+                hints();
+            }
         else{
             cout << "Game had the incorrect number of pegs" << endl;
         }
@@ -68,7 +71,6 @@ void Game:: guessPrompt(){
         cout << "You used too many guesses, You loose" << endl;
     }
     cout << "Would you like to play again (Y/N)? ";
-
 }
 
 void Game::choosePrompt() {

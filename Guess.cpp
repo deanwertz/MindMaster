@@ -20,7 +20,16 @@ vector<string> Game:: myVector(){
     }
     return answer;
 }
+void Game::hints() {
+    for (int i =0;i<4;i++){
+        for (int j =0;j<4;j++){
+            if((guessingVector[i]==answer[j])&&(guessingVector[i]!=answer[i])){
+                cout<<"Color at position "<<i<<" belongs to at position "<<j<<endl;
+            }
+        }
 
+    }
+}
 void Game:: guessPrompt(){
    vector<string> guessingVector(4);
     //answer = {"1","2","3","4"};
