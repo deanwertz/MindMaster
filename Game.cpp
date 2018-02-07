@@ -70,3 +70,7 @@ void Game:: guessPrompt(){
     cout << "Would you like to play again (Y/N)? ";
 
 }
+
+void Game::choosePrompt() {
+
+}

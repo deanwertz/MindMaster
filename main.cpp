@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include "Guess.h"
+#include "Game.h"
 using namespace std;
 int main() {
     Game game;
