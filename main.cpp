@@ -6,8 +6,6 @@ using namespace std;
 
 int main() {
 
-    //vector<int> intVector;
-    //string genericNumberString = "1234";
     Game gameInstance;
     int gameChoiceInt;
     int playAgainInt;
@@ -27,7 +25,7 @@ int main() {
     }
     else {
         cout << endl << "It's all there, black and white, clear as crystal!" << endl;
-        cout << "You get nothing! You lose! Good day sir!" << endl;
+        cout << "You get nothing! You lose! Good day sir!" << endl << endl;
     }
 
     cout << "Enter '1' to play again or '0' to exit." << endl;

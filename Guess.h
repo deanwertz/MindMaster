@@ -6,9 +6,9 @@
 #include <string>
 #include <iostream>
 
-//#ifndef CS205MASTERMIND_GUESS_H
+//#ifndef CS205MASTERMIND_GUESS_H   //Default ifndef statement
 //#define CS205MASTERMIND_GUESS_H
-#ifndef GUESS_H_INCLUDED
+#ifndef GUESS_H_INCLUDED            //ifndef statement for Peter's laptop
 #define GUESS_H_INCLUDED
 
 using namespace std;
@@ -18,32 +18,20 @@ public:
 
     Game();
     vector<string> myVector();
+    bool checkValidInput(string inputString);
     void guessPrompt();
     void instructions();
     void slotsDisplay();
-    void hintss();
+
     vector<string> answer;
     vector<string> guessVector;
     vector<string> slots;
     string guess;
-    string hint;
-    string playAgain;
+    string hintChar;
+    string hintString;
     int guesses;
-    int hints;
-    bool guessOrChoose;
-
-};
-
-class Pin {
-public:
-
-    Pin(string);
-    void flipBlackPinFlag();
-    void flipWhitePinFlag();
-
-    string pinColor;
-    bool blackPinFlag;
-    bool whitePinFlag;
+    int hintInt;
+    int hintsUsed;
 
 };
 
