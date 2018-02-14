@@ -24,8 +24,7 @@ int main() {
         gameInstance.guessPrompt();
     }
     else {
-        cout << endl << "It's all there, black and white, clear as crystal!" << endl;
-        cout << "You get nothing! You lose! Good day sir!" << endl << endl;
+        gameInstance.answerPrompt();
     }
 
     cout << "Enter '1' to play again or '0' to exit." << endl;
