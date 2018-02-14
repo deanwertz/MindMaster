@@ -57,7 +57,10 @@ void Game:: guessPrompt(){
     while (answer != guessingVector && guesses < 10){
         cout << "Please enter your guess: ";
         cin >> guess ;
-        if (guess == "hint"){
+        if (guess == "giveup"){
+            break;
+        }
+        else if (guess == "hint"){
             hintInt = rand()%4;
             hintChar = answer[hintInt];
             if (hintChar == "0"){hintString = "red";}
@@ -127,8 +130,11 @@ void Game:: guessPrompt(){
         cout << "You Win. Whoop Whoop!" << endl;
     }
     //Losing Text:
-    if (guesses >= 10){
+    else if (guesses >= 10){
         cout << "You used too many guesses, you lose. Good try though!" << endl;
+    }
+    else {
+        cout << "Aww, OK." << endl;
     }
 }
 
@@ -137,6 +143,7 @@ void Game::instructions() {
     cout<<"----Enter these digits for different colors:---"<<endl;
     cout<<"0-Red 1-Orange 2-Yellow 3-Green 4-Blue 5-Violet"<<endl;
     cout<<"----Enter 'hint' for a hint if you're stuck.---"<<endl;
+    cout<<"--Enter 'giveup' if you would like to give up.-"<<endl;
 }
 
 void Game:: slotsDisplay(){
