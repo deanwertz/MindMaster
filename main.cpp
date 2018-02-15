@@ -1,25 +1,26 @@
 #include <iostream>
 #include <vector>
-#include "Guess.h"
+#include "Game.h"
 
 using namespace std;
 
 int main() {
 
     Game gameInstance;
-    int gameChoiceInt;
-    int playAgainInt;
-
+    string gameChoiceString;
+    string playAgainString;
+//Written by Ishan Verma
     cout << endl << "--------------Welcome to Mastermind!------------------" << endl;
     cout << "Would you like to break a code or set a code to break?" << endl;
     cout << "Enter '1' to break a code or '0' to set a code." << endl;
-
-    cin >> gameChoiceInt;
-    while (gameChoiceInt != 0 && gameChoiceInt != 1) {
+//Written by Ishan Verma
+    cin >> gameChoiceString;
+    while (gameChoiceString != "0" && gameChoiceString != "1") {
         cout << "Invalid input. Please enter '1' or '0.'" << endl;
-        cin >> gameChoiceInt;
+        cin >> gameChoiceString;
     }
-    if (gameChoiceInt == 1) {
+    //By Ishan Verma
+    if (gameChoiceString == "1") {
         gameInstance.instructions();
         gameInstance.guessPrompt();
     }
@@ -29,12 +30,12 @@ int main() {
 
     cout << "Enter '1' to play again or '0' to exit." << endl;
 
-    cin>>playAgainInt;
-    while (playAgainInt != 0 && playAgainInt != 1) {
+    cin>>playAgainString;
+    while (playAgainString != "0" && playAgainString != "1") {
         cout << "Invalid input. Please enter '1' or '0.'" << endl;
-        cin >> playAgainInt;
+        cin >> playAgainString;
     }
-    if (playAgainInt == 1) {
+    if (playAgainString == "1") {
         main();
     }
 

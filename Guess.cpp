@@ -2,7 +2,7 @@
 // Created by Dean Wertz on 2/4/18.
 //
 
-#include "Guess.h"
+#include "Game.h"
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -12,7 +12,7 @@
 using namespace std;
 
 Game:: Game(){}
-
+//Written by Ishan Verma
 vector<string> Game:: myVector(){
     vector<string> answer;
     srand((unsigned)time(0));
@@ -23,6 +23,7 @@ vector<string> Game:: myVector(){
 }
 
 //Boolean to test if a string is made up of numeric digits:
+//Written by Peter Tempesta
 bool Game::checkValidInput(string inputString){
     for (int s = 0; s < inputString.length(); s++){
         if (
@@ -42,24 +43,49 @@ bool Game::checkValidInput(string inputString){
     }
     return true;
 }
-
+//Written by Peter Tempesta
+bool Game::checkValidInputCodeMode(string inputString){
+    for (int s = 0; s < inputString.length(); s++){
+        if (
+        (inputString[s] != '0') &&
+        (inputString[s] != '1') &&
+        (inputString[s] != '2') &&
+        (inputString[s] != '3') &&
+        (inputString[s] != '4') &&
+        (inputString[s] != '5')
+        ) {
+                return false;
+        }
+    }
+    return true;
+}
+//Written by Dean Wertz
 void Game:: guessPrompt(){
+
+//Sets size of guessing vector
     vector<string> guessingVector(4);
+//sets the answer vector equal to the input vector
     vector<string> answer = myVector();
     //Show answer for debugging:
-    for (int q = 0; q < answer.size(); q ++){
-        cout << answer[q] << endl;
-    }
+ //   for (int q = 0; q < answer.size(); q ++){
+ //       cout << answer[q] << endl;
+ //   }
     guesses = 0;
+    //hintsUsed for the hints section
+    //Written by Ishan Verma and Peter Tempesta (hints section)
     hintsUsed = 0;
 
-    //While loop, the whole shebang:
+//While loop that will keep looping until the turns are up or you have guessed the correct pattern
     while (answer != guessingVector && guesses < 10){
         cout << "Please enter your guess: ";
         cin >> guess ;
+//allows the user to give up
+//Added by Peter Tempesta
         if (guess == "giveup"){
             break;
         }
+//This section , when a player enters 'hint,' will give a helpful hint, with
+//up to three hints given. Written by Ishan Verma and Peter Tempesta
         else if (guess == "hint"){
             hintInt = rand()%4;
             hintChar = answer[hintInt];
@@ -93,6 +119,7 @@ void Game:: guessPrompt(){
             cout << guesses << endl;
 
             //Section to compare pegs and count keys:
+            //Written by Peter Tempesta
             int blackKeyCount = 0;
             int whiteKeyCount = 0;
             vector<int> answerKeyFlagVector = {0, 0, 0, 0};
@@ -118,6 +145,7 @@ void Game:: guessPrompt(){
             cout << "White Key Count: " << whiteKeyCount << endl;
         }
         //Error handling to handle wrong string input length and wrong string content:
+        //Logic by Dean Wertz, text by Ishan Verma and Peter Tempesta
         else if(guess.length() != 4 && checkValidInput(guess)){
             cout << "You must guess with the correct number of pegs!" << endl;
         }
@@ -137,15 +165,16 @@ void Game:: guessPrompt(){
         cout << "Aww, OK." << endl;
     }
 }
-
+//Created by Ishan Verma
 void Game::instructions() {
     cout<< endl << "------------Welcome, code breaker!-------------"<<endl;
     cout<<"----Enter these digits for different colors:---"<<endl;
     cout<<"0-Red 1-Orange 2-Yellow 3-Green 4-Blue 5-Violet"<<endl;
     cout<<"----Enter 'hint' for a hint if you're stuck.---"<<endl;
-    cout<<"--Enter 'giveup' if you would like to give up.-"<<endl;
+    cout<<"--Enter 'giveup' if you would like to give up.-"<<endl << endl;
 }
 
+//Written by Ishan Verma
 void Game:: slotsDisplay(){
     for (int i = 0; i < 10; i++){
         slots[i] = "_ _ _ _";
